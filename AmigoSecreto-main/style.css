@@ -1,0 +1,157 @@
+:root {
+    --color-primary: #5C7285; /* Azul más oscuro para el fondo principal */
+    --color-secondary: #E2E0C8; /* Beige claro para el contenedor principal */
+    --color-tertiary: #A7B49E; /* Verde grisáceo para elementos secundarios/deshabilitados */
+    --color-button: #818C78; /* Verde oliva para botones */
+    --color-button-hover: #5C7285; /* Azul más oscuro para hover del botón */
+    --color-text: #5C7285; /* Azul oscuro para el texto, a juego con el fondo principal */
+    --color-white: #FFFFFF; /* Blanco para contrastes */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Color de sombra consistente */
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text);
+    overflow: hidden; /* Evita scrollbars innecesarios */
+}
+
+.main-content {
+    background-color: var(--color-secondary);
+    border-radius: 20px; /* Bordes redondeados para el contenedor principal */
+    padding: 40px;
+    box-shadow: 0 10px 20px var(--shadow-color); /* Sombra más pronunciada */
+    max-width: 800px; /* Ancho máximo para mejor responsividad */
+    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido horizontalmente */
+}
+
+/* Banner */
+.header-banner {
+    margin-bottom: 30px; /* Espacio debajo del banner */
+    text-align: center; /* Centrar el texto del banner */
+}
+
+.main-title {
+    font-size: 3em; /* Tamaño de fuente relativo */
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-primary); /* Texto más oscuro */
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.header-banner img {
+    max-width: 200px; /* Ajustar tamaño de la imagen */
+    margin-top: 20px;
+}
+
+/* Sección de entrada */
+.input-section {
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-wrapper {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-name {
+    flex-grow: 1; /* El input ocupa el espacio disponible */
+    padding: 15px;
+    border: 1px solid var(--color-tertiary);
+    border-radius: 25px 0 0 25px;
+    font-size: 1em;
+    color: var(--color-text);
+    box-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.button-add {
+    padding: 15px 25px; /* Ajustar padding */
+    border-radius: 0 25px 25px 0;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    box-shadow: 2px 2px 4px var(--shadow-color);
+    transition: background-color 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    padding: 15px;
+    border-left: 5px solid var(--color-button);
+}
+
+
+.result-list {
+    color: var(--color-button);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botones principales */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centrar botones */
+    width: 100%;
+    margin-bottom: 20px; /* Espacio entre botones */
+}
+
+.button-draw {
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    font-size: 1em;
+    box-shadow: 2px 2px 4px var(--shadow-color);
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Espacio entre botones */
+}
+
+.button-draw img {
+    max-width: 20px;
+    margin-right: 10px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+
+button:disabled {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    cursor: not-allowed;
+    box-shadow: none;
+}
